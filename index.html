@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" , href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+    </style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+
+    <title>CSV file </title>
+</head>
+
+<body>
+
+    <div id="view"></div>
+
+    <div id="title">
+        <p>Predicting poisonous mushrooms</p>
+    </div>
+
+    <div>
+        <ul id="list">
+            <li>The total amount of predictions made on mushrooms:</li>
+                <p id="totalAmount"></p>
+
+            <li>The accuracy of the prediction model:</li>    
+                <p id="accuracy"></p>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="confusion_matrix">
+        <h4>Confusion Matrix</h4>
+        <table id="confusion">
+            <tr>
+                <td></td>
+                <td>Predicted edible</td>
+                <td>Predicted poisonous</td>
+            </tr>
+            <tr>
+                <td>Actually edible</td>
+                <td id="true_true"></td>
+                <td id="true_false"></td>
+            </tr>
+            <tr>
+                <td>Actually poisonous</td>
+                <td id="false_true"></td>
+                <td id="false_false"></td>
+            </tr>`
+        </table>
+    </div>
+
+    <script src="code.js" defer type="module"></script>
+
+</body>
+
+</html>
